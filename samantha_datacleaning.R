@@ -1,7 +1,7 @@
 
 
 #READING IN THE DATA
-labor_unemployment = read.csv("Labor_unemployment.csv", header = TRUE)
+#labor_unemployment = read.csv("Labor_unemployment.csv", header = TRUE)
 median_income = read.csv("median_income.csv", header = TRUE)
 home_sales = read_excel("home_sales.xlsx")
 household_size = read_excel("household_size.xlsx")
