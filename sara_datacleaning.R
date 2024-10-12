@@ -48,3 +48,9 @@ grad_rates_clean1$completion_count[grad_rates_clean1$completion_count == '<'] <-
 grad_rates_clean1$completion_rate[grad_rates_clean1$completion_rate == '<'] <- '0'
 grad_rates_clean1$on_time_grad_rate[grad_rates_clean1$on_time_grad_rate == '100'] <- '0'
 grad_rates_clean1$completion_rate[grad_rates_clean1$completion_rate == '100'] <- '0'
+
+enrollment_clean1$grade[enrollment_clean1$grade == ''] <- 'total'
+
+grad_rates_clean2 <- grad_rates_clean1[-1,-2]
+grad_rates_clean2 <- grad_rates_clean2[-1,]
+
