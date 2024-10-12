@@ -1,50 +1,62 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    https://shiny.posit.co/
-#
-
 library(shiny)
+library(ggplot2)
+library(dplyr)
+library(leaflet)
 
-# Define UI for application that draws a histogram
-ui <- fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("distPlot")
-        )
-    )
+# Sample housing data
+housing_data <- data.frame(
+  county = c("County A", "County B", "County C", "County D"),
+  median_home_price = c(300000, 250000, 400000, 350000),
+  median_rent = c(1200, 1000, 1500, 1300),
+  population = c(50000, 30000, 80000, 60000)
 )
 
-# Define server logic required to draw a histogram
+# Define UI for the app
+ui <- fluidPage(
+  titlePanel("Housing Data by County"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("county", "Select County:", 
+                  choices = housing_data$county),
+      radioButtons("data_type", "Select Data Type:",
+                   choices = c("Median Home Price" = "median_home_price",
+                               "Median Rent" = "median_rent",
+                               "Population" = "population"))
+    ),
+    
+    mainPanel(
+      plotOutput("dataPlot"),
+      leafletOutput("mapPlot")
+    )
+  )
+)
+
+# Define server logic for the app
 server <- function(input, output) {
-
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white',
-             xlab = 'Waiting time to next eruption (in mins)',
-             main = 'Histogram of waiting times')
-    })
+  
+  # Filter data based on input$county
+  selected_data <- reactive({
+    housing_data %>%
+      filter(county == input$county)
+  })
+  
+  # Plot data
+  output$dataPlot <- renderPlot({
+    data <- selected_data()
+    
+    ggplot(data, aes_string(x = "county", y = input$data_type)) +
+      geom_bar(stat = "identity", fill = "steelblue") +
+      labs(y = input$data_type, x = "County") +
+      theme_minimal()
+  })
+  
+  # Show a map (this is a placeholder map)
+  output$mapPlot <- renderLeaflet({
+    leaflet() %>%
+      addTiles() %>%
+      addMarkers(lng = -93.85, lat = 42.01, popup = input$county)  # Sample coordinates
+  })
 }
 
 # Run the application 
