@@ -19,3 +19,37 @@ enrollment_clean <- enrollment_grade |>
     sep = ",",
     convert = TRUE
   )
+
+
+
+
+
+install.packages("stingr")
+library(stringr)
+
+
+enrollment_clean$division <- gsub(" Public Schools$", "", enrollment_clean$division, ignore.case = TRUE)
+
+install.packages("dplyr")
+library(dplyr)
+enrollment_clean1 <- enrollment_clean %>% select(division, grade, count)
+
+mutate( make = recode(
+  make,
+  FOR = "FORD",
+  GM = "GMC",
+  HARL = "HD",
+  JAG = "JAGU",
+  LAND = "LNDR",
+  MERD = "MERC",
+  MINI = "MNNI",
+  MIST = "MITS",
+  4
+  PONY = "PONT",
+  RAMS = "RAM",
+  ROYC = "ROL",
+  SATR = "STRN",
+  SATU = "STRN",
+  TOYO = "TOYT",
+  VW = "VOLK"
+))
