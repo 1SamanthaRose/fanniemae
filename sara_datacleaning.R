@@ -39,3 +39,12 @@ grad_rates_clean2 <- gsub("([a-z])([A-Z])", "\\1 \\2", division)
 grad_rates_clean1$division <- grad_rates_clean2
 grad_rates_clean1$division <- gsub(" Public Schools$", "", grad_rates_clean1$division, ignore.case = TRUE)
 
+grad_rates_clean1$subgroup <- gsub('[^[:alnum:] ]', '', grad_rates_clean1$subgroup, ignore.case = TRUE)
+
+grad_rates_clean1$cohort[grad_rates_clean1$cohort == 'n/a'] <- '0'
+grad_rates_clean1$graduation_count[grad_rates_clean1$graduation_count == '<'] <- '0'
+grad_rates_clean1$on_time_grad_rate[grad_rates_clean1$on_time_grad_rate == '<'] <- '0'
+grad_rates_clean1$completion_count[grad_rates_clean1$completion_count == '<'] <- '0'
+grad_rates_clean1$completion_rate[grad_rates_clean1$completion_rate == '<'] <- '0'
+grad_rates_clean1$on_time_grad_rate[grad_rates_clean1$on_time_grad_rate == '100'] <- '0'
+grad_rates_clean1$completion_rate[grad_rates_clean1$completion_rate == '100'] <- '0'
