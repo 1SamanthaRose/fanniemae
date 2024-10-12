@@ -26,9 +26,16 @@ library(stringr)
 
 enrollment_clean$division <- gsub(" Public Schools$", "", enrollment_clean$division, ignore.case = TRUE)
 
+
 install.packages("dplyr")
 library(dplyr)
 enrollment_clean1 <- enrollment_clean %>% select(division, grade, count)
 
+grad_rates_clean1$division <- gsub('[^[:alnum:] ]', '', grad_rates_clean1$division, ignore.case = TRUE)
+
+x = grad_rates_clean1$division
+grad_rates_clean2 <- gsub("([a-z])([A-Z])", "\\1 \\2", division)
+
+grad_rates_clean1$division <- grad_rates_clean2
 grad_rates_clean1$division <- gsub(" Public Schools$", "", grad_rates_clean1$division, ignore.case = TRUE)
 
