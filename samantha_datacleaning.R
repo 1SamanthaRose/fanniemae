@@ -19,6 +19,3 @@ enrollment_grade = read.csv("enrollment_grade.csv", header = TRUE)
 
 
 #Cleaning Data
-
-    #home sale prices
-home_sale_prices = select(home_sale_prices, Monthly Median Sales Prices ($) by County/Independent City, 2016 - present)
