@@ -57,3 +57,4 @@ grad_rates_clean2 <- grad_rates_clean2[-1,]
 enrollment_clean_2 <- enrollment_clean %>% select(year, division, grade, count)
 enrollment_clean_2$grade[enrollment_clean_2$grade == 'total'] <- 'all'
 enrollment_clean_2 <- enrollment_clean_2[-(1:2),]
+# done 
