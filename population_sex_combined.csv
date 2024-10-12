@@ -1,134 +1,134 @@
-CountyName,TotalEstimate
-Accomack County,33367
-Albemarle County,112513
-Alexandria city,157594
-Alleghany County,15159
-Amelia County,13309
-Amherst County,31426
-Appomattox County,16253
-Arlington County,235845
-Augusta County,77433
-Bath County,4177
-Bedford County,79761
-Bland County,6241
-Botetourt County,33734
-Bristol city,17036
-Brunswick County,15965
-Buchanan County,20246
-Buckingham County,16869
-Buena Vista city,6639
-Campbell County,55518
-Caroline County,31181
-Carroll County,29126
-Charles City County,6760
-Charlotte County,11563
-Charlottesville city,46289
-Chesapeake city,249377
-Chesterfield County,366019
-Clarke County,14882
-Colonial Heights city,18158
-Covington city,5722
-Craig County,4898
-Culpeper County,52822
-Cumberland County,9697
-Danville city,42507
-Dickenson County,14089
-Dinwiddie County,28057
-Emporia city,5680
-Essex County,10602
-Fairfax County,1145354
-Fairfax city,24242
-Falls Church city,14576
-Fauquier County,73290
-Floyd County,15532
-Fluvanna County,27442
-Franklin County,54838
-Franklin city,8194
-Frederick County,92007
-Fredericksburg city,28258
-Galax city,6687
-Giles County,16711
-Gloucester County,38875
-Goochland County,24906
-Grayson County,15356
-Greene County,20631
-Greensville County,11373
-Halifax County,34013
-Hampton city,137217
-Hanover County,110513
-Harrisonburg city,51784
-Henrico County,333120
-Henry County,50760
-Highland County,2247
-Hopewell city,23046
-Isle of Wight County,38898
-James City County,78818
-King George County,26985
-King William County,17845
-King and Queen County,6681
-Lancaster County,10866
-Lee County,22287
-Lexington city,7346
-Loudoun County,420773
-Louisa County,38106
-Lunenburg County,11988
-Lynchburg city,79166
-Madison County,13828
-Manassas Park city,17123
-Manassas city,42620
-Martinsville city,13539
-Mathews County,8537
-Mecklenburg County,30367
-Middlesex County,10738
-Montgomery County,99373
-Nelson County,14773
-New Kent County,23296
-Newport News city,185118
-Norfolk city,236973
-Northampton County,12132
-Northumberland County,12007
-Norton city,3668
-Nottoway County,15638
-Orange County,36593
-Page County,23753
-Patrick County,17660
-Petersburg city,33261
-Pittsylvania County,60541
-Poquoson city,12479
-Portsmouth city,97384
-Powhatan County,30503
-Prince Edward County,21922
-Prince George County,42634
-Prince William County,481114
-Pulaski County,33841
-Radford city,16379
-Rappahannock County,7422
-Richmond County,8968
-Richmond city,227171
-Roanoke County,96653
-Roanoke city,99213
-Rockbridge County,22673
-Rockingham County,83905
-Russell County,25763
-Salem city,25372
-Scott County,21536
-Shenandoah County,44337
-Smyth County,29799
-Southampton County,18003
-Spotsylvania County,141097
-Stafford County,157606
-Staunton city,25581
-Suffolk city,94856
-Surry County,6546
-Sussex County,10866
-Tazewell County,40392
-Virginia Beach city,457900
-Warren County,40800
-Washington County,53985
-Waynesboro city,22341
-Westmoreland County,18480
-Williamsburg city,15486
-Winchester city,28103
-Wise County,36105
-Wythe County,28275
-York County,70238
+CountyName,TotalEstimate,TotalMaleEstimate,TotalFemaleEstimate
+Accomack County,33367,16257,17110
+Albemarle County,112513,54068,58445
+Alexandria city,157594,76589,81005
+Alleghany County,15159,7501,7658
+Amelia County,13309,6531,6778
+Amherst County,31426,14973,16453
+Appomattox County,16253,7910,8343
+Arlington County,235845,119030,116815
+Augusta County,77433,39547,37886
+Bath County,4177,2073,2104
+Bedford County,79761,39452,40309
+Bland County,6241,3540,2701
+Botetourt County,33734,16820,16914
+Bristol city,17036,8213,8823
+Brunswick County,15965,8513,7452
+Buchanan County,20246,10504,9742
+Buckingham County,16869,9405,7464
+Buena Vista city,6639,3128,3511
+Campbell County,55518,27091,28427
+Caroline County,31181,15457,15724
+Carroll County,29126,14335,14791
+Charles City County,6760,3362,3398
+Charlotte County,11563,5865,5698
+Charlottesville city,46289,22528,23761
+Chesapeake city,249377,122672,126705
+Chesterfield County,366019,177338,188681
+Clarke County,14882,7353,7529
+Colonial Heights city,18158,8304,9854
+Covington city,5722,2716,3006
+Craig County,4898,2446,2452
+Culpeper County,52822,26404,26418
+Cumberland County,9697,4887,4810
+Danville city,42507,19496,23011
+Dickenson County,14089,7165,6924
+Dinwiddie County,28057,14111,13946
+Emporia city,5680,2531,3149
+Essex County,10602,4988,5614
+Fairfax County,1145354,573140,572214
+Fairfax city,24242,11945,12297
+Falls Church city,14576,7274,7302
+Fauquier County,73290,36589,36701
+Floyd County,15532,7649,7883
+Fluvanna County,27442,12811,14631
+Franklin County,54838,27147,27691
+Franklin city,8194,3921,4273
+Frederick County,92007,46279,45728
+Fredericksburg city,28258,13202,15056
+Galax city,6687,2976,3711
+Giles County,16711,8254,8457
+Gloucester County,38875,19309,19566
+Goochland County,24906,12404,12502
+Grayson County,15356,8064,7292
+Greene County,20631,9860,10771
+Greensville County,11373,6951,4422
+Halifax County,34013,16334,17679
+Hampton city,137217,66248,70969
+Hanover County,110513,54636,55877
+Harrisonburg city,51784,25035,26749
+Henrico County,333120,159152,173968
+Henry County,50760,24420,26340
+Highland County,2247,1034,1213
+Hopewell city,23046,10827,12219
+Isle of Wight County,38898,19422,19476
+James City County,78818,38132,40686
+King George County,26985,13719,13266
+King William County,17845,8842,9003
+King and Queen County,6681,3485,3196
+Lancaster County,10866,5325,5541
+Lee County,22287,11812,10475
+Lexington city,7346,4285,3061
+Loudoun County,420773,210848,209925
+Louisa County,38106,19078,19028
+Lunenburg County,11988,6285,5703
+Lynchburg city,79166,36991,42175
+Madison County,13828,6764,7064
+Manassas Park city,17123,8685,8438
+Manassas city,42620,21632,20988
+Martinsville city,13539,6349,7190
+Mathews County,8537,4124,4413
+Mecklenburg County,30367,15032,15335
+Middlesex County,10738,5360,5378
+Montgomery County,99373,51542,47831
+Nelson County,14773,7463,7310
+New Kent County,23296,12186,11110
+Newport News city,185118,90193,94925
+Norfolk city,236973,120733,116240
+Northampton County,12132,5722,6410
+Northumberland County,12007,5555,6452
+Norton city,3668,1692,1976
+Nottoway County,15638,8295,7343
+Orange County,36593,18178,18415
+Page County,23753,11987,11766
+Patrick County,17660,8930,8730
+Petersburg city,33261,15163,18098
+Pittsylvania County,60541,30142,30399
+Poquoson city,12479,6277,6202
+Portsmouth city,97384,46879,50505
+Powhatan County,30503,16003,14500
+Prince Edward County,21922,11433,10489
+Prince George County,42634,23947,18687
+Prince William County,481114,242456,238658
+Pulaski County,33841,17127,16714
+Radford city,16379,7411,8968
+Rappahannock County,7422,3746,3676
+Richmond County,8968,5035,3933
+Richmond city,227171,108032,119139
+Roanoke County,96653,46725,49928
+Roanoke city,99213,46791,52422
+Rockbridge County,22673,11175,11498
+Rockingham County,83905,41490,42415
+Russell County,25763,12869,12894
+Salem city,25372,12187,13185
+Scott County,21536,10954,10582
+Shenandoah County,44337,21907,22430
+Smyth County,29799,14783,15016
+Southampton County,18003,9450,8553
+Spotsylvania County,141097,70013,71084
+Stafford County,157606,79848,77758
+Staunton city,25581,11715,13866
+Suffolk city,94856,46381,48475
+Surry County,6546,3285,3261
+Sussex County,10866,6320,4546
+Tazewell County,40392,20128,20264
+Virginia Beach city,457900,225616,232284
+Warren County,40800,20570,20230
+Washington County,53985,26961,27024
+Waynesboro city,22341,10995,11346
+Westmoreland County,18480,8916,9564
+Williamsburg city,15486,7277,8209
+Winchester city,28103,13874,14229
+Wise County,36105,18850,17255
+Wythe County,28275,13968,14307
+York County,70238,34866,35372
