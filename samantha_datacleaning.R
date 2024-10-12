@@ -8,13 +8,3 @@ household_size = read_excel("household_size.xlsx")
 owners_renters = read.csv("owners_renters.csv", header = TRUE)
 pop_sex_age = read.csv("population_sex_age.csv", header = TRUE)
 home_sale_prices = read_excel("sales_prices.xlsx")
-
-    
-    #issues reading in data
-          #more columns than column names
-grad_rates = read.csv("grad_rates_demographics.csv", header = TRUE)
-enrollment_grade = read.csv("enrollment_grade.csv", header = TRUE)
-
-
-
-#Cleaning Data
