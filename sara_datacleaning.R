@@ -91,3 +91,7 @@ enrollment_clean_2 <- rename(enrollment_clean_2, total_student = "count")
 
 master <- merge(enrollment_clean_2, home_sales, by = "county", all = TRUE)
 master2 <-merge(master, owners_renters, by = "county", all = TRUE)
+
+household_size <- rename(household_size, avg_household_size = "Avg")
+
+sales_prices <- rename(sales_prices, avg_sale_price = "...2")
