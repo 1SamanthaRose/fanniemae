@@ -58,3 +58,27 @@ enrollment_clean_2 <- enrollment_clean %>% select(year, division, grade, count)
 enrollment_clean_2$grade[enrollment_clean_2$grade == 'total'] <- 'all'
 enrollment_clean_2 <- enrollment_clean_2[-(1:2),]
 # done 
+
+# graphs
+
+#renaming all datasets to have the same `county` column name
+library(dplyr)
+grad_rates_clean2 <- rename(grad_rates_clean2, county = division)
+enrollment_clean_2 <- rename(enrollment_clean_2, county = division)
+home_sales <- rename(home_sales, county = "County/City")
+population_sex_combined <- rename(population_sex_combined, county = "CountyName")
+population_sex_combined[population_sex_combined$county == 'city'] <- 'City'
+population_sex_combined$county <- gsub(" city", " City", population_sex_combined$county, ignore.case = TRUE)
+household_size <- rename(household_size, county = County)
+
+population_sex_combined$county <- gsub("([a-z])([A-Z])", "\\1 \\2", population_sex_combined$county)
+
+grad_rates_clean2 %>% count(county)
+home_sales %>% count(county)
+owners_renters  %>% count(county)
+population_sex_combined  %>% count(county)
+sales_prices  %>% count(county)
+enrollment_clean_2  %>% count(county)
+household_size  %>% count(county)
+
+
