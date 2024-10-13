@@ -1,17 +1,40 @@
 
 
 #READING IN THE DATA
-#labor_unemployment = read.csv("Labor_unemployment.csv", header = TRUE)
-median_income = read.csv("median_income.csv", header = TRUE)
-home_sales = read_excel("home_sales.xlsx")
-household_size = read_excel("household_size.xlsx")
+
 owners_renters = read.csv("owners_renters.csv", header = TRUE)
-pop_sex = read.csv("population_sex.csv", header = TRUE)
 home_sale_prices = read_excel("sales_prices.xlsx")
 
-#fixing rows
 
-home_sales = select(home_sales, -c(3:14))
 
-home_sale_prices = select(home_sale_prices, -c(3:105))
+#last bit of pre-processing
+library(tidyverse)
+home_sale_prices = home_sale_prices %>%
+                    rename(
+                      price = ...2
+                    )
+#merge datasets
+sales_tenancy = merge(home_sale_prices, owners_renters, by = "county")
+
+
+
+#visualisations
+
+library(ggpubr)
+library(scales)
+library(ggplot2)
+
+
+ggscatter(sales_tenancy, x = "tenant", y = "price", 
+          add = "reg.line", conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "kendall",
+          xlab = "Home Renters", ylab = "Average Sales Price of Home",
+          xlim = c(0,20000))
+            #ffx co is outlier with 126k renters
+
+ggscatter(sales_tenancy, x = "total.households", y = "price", 
+          add = "reg.line", conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "kendall",
+          xlab = "Total Households", ylab = "Average Sales Price of Home",
+          xlim = c(0, 60000), scale_y_continuous(labels = comma))
 

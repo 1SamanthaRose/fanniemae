@@ -81,6 +81,7 @@ sales_prices  %>% count(county)
 enrollment_clean_2  %>% count(county)
 household_size  %>% count(county)
 
+
 grad_rates_clean2$county <- gsub(" Public Schools$", "", grad_rates_clean2$county, ignore.case = TRUE)
 grad_rates_clean2$county <- gsub(" Public Schools$", "", grad_rates_clean2$county, ignore.case = TRUE)
 
@@ -95,3 +96,5 @@ master2 <-merge(master, owners_renters, by = "county", all = TRUE)
 household_size <- rename(household_size, avg_household_size = "Avg")
 
 sales_prices <- rename(sales_prices, avg_sale_price = "...2")
+
+
