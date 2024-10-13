@@ -81,4 +81,13 @@ sales_prices  %>% count(county)
 enrollment_clean_2  %>% count(county)
 household_size  %>% count(county)
 
+grad_rates_clean2$county <- gsub(" Public Schools$", "", grad_rates_clean2$county, ignore.case = TRUE)
+grad_rates_clean2$county <- gsub(" Public Schools$", "", grad_rates_clean2$county, ignore.case = TRUE)
 
+enrollment_clean_2$grade[enrollment_clean_2$grade == ''] <- 'total'
+library(dplyr)
+home_sales <- rename(home_sales, average_number_homes_sold = "Average")
+enrollment_clean_2 <- rename(enrollment_clean_2, total_student = "count")
+
+master <- merge(enrollment_clean_2, home_sales, by = "county", all = TRUE)
+master2 <-merge(master, owners_renters, by = "county", all = TRUE)
